@@ -18,5 +18,10 @@ RSpec.describe StringCalculator do
     it "returns the sum of multiple numbers" do
       expect(StringCalculator.new.add("1,2,3,4,5")).to eq(15)
     end
+
+    it "returns the sum of multiple numbers if instead or , \n is given " do
+      expect(StringCalculator.new.add("1\n2\n3,4,5")).to eq(15)
+    end
+
   end
 end

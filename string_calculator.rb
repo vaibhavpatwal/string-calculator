@@ -2,7 +2,7 @@
 class StringCalculator
 
   def add(numbers)
-    delimiter = ','
+    delimiter = /,|\n/
     numbers_arr = numbers.split(delimiter)
     sum = 0
 
