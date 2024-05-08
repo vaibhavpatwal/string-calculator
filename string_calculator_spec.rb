@@ -19,12 +19,16 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.new.add("1,2,3,4,5")).to eq(15)
     end
 
-    it "returns the sum of multiple numbers if instead of , \n is given " do
+    it "returns the sum of multiple numbers if instead of , \n is given" do
       expect(StringCalculator.new.add("1\n2\n3,4,5")).to eq(15)
     end
 
     it "raises an error for invalid input '1,\n'" do
       expect { StringCalculator.new.add("1,\n2") }.to raise_error(ArgumentError)
+    end
+
+    it "returns the sum of numbers with delimiter other then , or \n" do
+      expect(StringCalculator.new.add("//;\n1;2")).to eq(3)
     end
   end
 end
