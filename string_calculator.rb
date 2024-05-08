@@ -10,7 +10,7 @@ class StringCalculator
       sum += num.to_i
     end
 
-    p sum
+    sum
   end
 end
 
