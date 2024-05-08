@@ -9,6 +9,10 @@ class StringCalculator
       delimiter = delimiter_line[2..-1]
     end
 
+    if numbers.include?(",\n")
+      raise ArgumentError, 'invalid input format: ",\n" should not appear one after other'
+    end
+
     numbers_arr = numbers.split(delimiter)
     sum = 0
 

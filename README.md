@@ -4,6 +4,6 @@
 
 # Note -
 
-# run - "gem install rspec" to install rspec testing package
+# run - "gem install rspec" to install rspec gem
 
-# run - rspec test_file_name in our case - rspec string_calculator_spec.rb
+# run - rspec string_calculator_spec.rb to run test cases
